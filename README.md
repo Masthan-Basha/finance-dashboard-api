@@ -4,6 +4,9 @@ Backend system for a finance dashboard with role-based access control, financial
 
 Built with **Node.js · Fastify · PostgreSQL · Prisma · JWT**
 
+🚀 **Live API:** https://finance-dashboard-api-1-cu7x.onrender.com
+📄 **Swagger Docs:** https://finance-dashboard-api-1-cu7x.onrender.com/docs
+
 ---
 
 ## Quick Start
@@ -49,43 +52,43 @@ PORT=3000
 
 ## Demo Credentials
 
-| Role | Email | Password |
-|---|---|---|
-| Admin | admin@demo.com | Admin@123 |
-| Analyst | analyst@demo.com | Analyst@123 |
-| Viewer | viewer@demo.com | Viewer@123 |
+| Role    | Email               | Password     |
+|---------|---------------------|--------------|
+| Admin   | admin@demo.com      | Admin@123    |
+| Analyst | analyst@demo.com    | Analyst@123  |
+| Viewer  | viewer@demo.com     | Viewer@123   |
 
 ---
 
 ## Role Permissions
 
-| Action | Viewer | Analyst | Admin |
-|---|:---:|:---:|:---:|
-| Login / view own profile | ✅ | ✅ | ✅ |
-| View & filter transactions | ✅ | ✅ | ✅ |
-| View dashboard & analytics | ✅ | ✅ | ✅ |
-| Create / edit / delete transactions | ❌ | ❌ | ✅ |
-| Manage users | ❌ | ❌ | ✅ |
+| Action                              | Viewer | Analyst | Admin |
+|-------------------------------------|:------:|:-------:|:-----:|
+| Login / view own profile            | ✅     | ✅      | ✅    |
+| View & filter transactions          | ✅     | ✅      | ✅    |
+| View dashboard & analytics          | ✅     | ✅      | ✅    |
+| Create / edit / delete transactions | ❌     | ❌      | ✅    |
+| Manage users                        | ❌     | ❌      | ✅    |
 
 ---
 
 ## API Endpoints
 
-| Method | Endpoint | Access | Description |
-|---|---|---|---|
-| POST | `/api/auth/register` | Public | Register new user |
-| POST | `/api/auth/login` | Public | Login, returns JWT |
-| GET | `/api/auth/me` | All | Own profile |
-| GET | `/api/users` | Admin | List users |
-| POST | `/api/users` | Admin | Create user |
-| PATCH | `/api/users/:id` | Admin | Update role / status |
-| DELETE | `/api/users/:id` | Admin | Delete user |
-| GET | `/api/transactions` | All | List with filters & pagination |
-| POST | `/api/transactions` | Admin | Create transaction |
-| PATCH | `/api/transactions/:id` | Admin | Update transaction |
-| DELETE | `/api/transactions/:id` | Admin | Soft delete |
-| GET | `/api/dashboard/summary` | All | Income, expenses, net balance, trends |
-| GET | `/api/dashboard/weekly` | All | Weekly income vs expense (8 weeks) |
+| Method | Endpoint                   | Access  | Description                              |
+|--------|----------------------------|---------|------------------------------------------|
+| POST   | `/api/auth/register`       | Public  | Register new user                        |
+| POST   | `/api/auth/login`          | Public  | Login, returns JWT                       |
+| GET    | `/api/auth/me`             | All     | Own profile                              |
+| GET    | `/api/users`               | Admin   | List users                               |
+| POST   | `/api/users`               | Admin   | Create user                              |
+| PATCH  | `/api/users/:id`           | Admin   | Update role / status                     |
+| DELETE | `/api/users/:id`           | Admin   | Delete user                              |
+| GET    | `/api/transactions`        | All     | List with filters & pagination           |
+| POST   | `/api/transactions`        | Admin   | Create transaction                       |
+| PATCH  | `/api/transactions/:id`    | Admin   | Update transaction                       |
+| DELETE | `/api/transactions/:id`    | Admin   | Soft delete                              |
+| GET    | `/api/dashboard/summary`   | All     | Income, expenses, net balance, trends    |
+| GET    | `/api/dashboard/weekly`    | All     | Weekly income vs expense (8 weeks)       |
 
 ### Transaction Filters
 
@@ -97,15 +100,15 @@ GET /api/transactions?type=INCOME&category=Salary&startDate=2026-01-01&endDate=2
 
 ## Tech Stack
 
-| Layer | Choice | Reason |
-|---|---|---|
-| Framework | Fastify | Schema-first, faster than Express |
-| Database | PostgreSQL | Relational integrity, powerful aggregations |
-| ORM | Prisma | Type-safe queries, clean migrations |
-| Validation | Zod | Field-level error messages |
-| Auth | JWT + bcrypt | Stateless auth, secure password hashing |
-| Docs | Swagger UI | Auto-generated, interactive docs |
-| Tests | Vitest | Unit tests for business logic |
+| Layer      | Choice          | Reason                                        |
+|------------|-----------------|-----------------------------------------------|
+| Framework  | Fastify         | Schema-first, faster than Express             |
+| Database   | PostgreSQL      | Relational integrity, powerful aggregations   |
+| ORM        | Prisma          | Type-safe queries, clean migrations           |
+| Validation | Zod             | Field-level error messages                    |
+| Auth       | JWT + bcrypt    | Stateless auth, secure password hashing       |
+| Docs       | Swagger UI      | Auto-generated, interactive docs              |
+| Tests      | Vitest          | Unit tests for business logic                 |
 
 ---
 
