@@ -59,8 +59,8 @@ app.decorate('authenticate', authenticate)
 app.get('/', async () => ({
   message: 'Finance Dashboard API',
   version: '1.0.0',
-  docs:    'http://localhost:3000/docs',
-  health:  'http://localhost:3000/health',
+  docs:    'https://finance-dashboard-api-1-cu7x.onrender.com/docs',
+  health:  'https://finance-dashboard-api-1-cu7x.onrender.com/health',
 }))
 
 // ── Health check ───────────────────────────────────────────────────────────────
