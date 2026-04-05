@@ -42,8 +42,8 @@ API Docs → `http://localhost:3000/docs`
 ## Environment Variables
 
 ```env
-DATABASE_URL="postgresql://postgres:yourpassword@localhost:5432/finance_db"
-JWT_SECRET="generate: node -e \"console.log(require('crypto').randomBytes(64).toString('hex'))\""
+DATABASE_URL="postgresql://YOUR_DB_USER:YOUR_DB_PASSWORD@localhost:5432/finance_db"
+JWT_SECRET="your-64-character-hex-secret"
 NODE_ENV="development"
 PORT=3000
 ```
