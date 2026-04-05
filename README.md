@@ -4,8 +4,8 @@ Backend system for a finance dashboard with role-based access control, financial
 
 Built with **Node.js · Fastify · PostgreSQL · Prisma · JWT**
 
-🚀 **Live API:** https://finance-dashboard-api-1-cu7x.onrender.com
-📄 **Swagger Docs:** https://finance-dashboard-api-1-cu7x.onrender.com/docs
+**Live API:** https://finance-dashboard-api-1-cu7x.onrender.com
+**Swagger Docs:** https://finance-dashboard-api-1-cu7x.onrender.com/docs
 
 ---
 
